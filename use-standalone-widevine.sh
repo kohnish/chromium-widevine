@@ -3,8 +3,10 @@
 # Find Chromium
 CHROMIUM_DIR="$1"
 
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
 # Get Widevine archive
-/bin/sh ./fetch-latest-widevine.sh -o ./widevine.zip
+/bin/sh ${SCRIPT_DIR}/fetch-latest-widevine.sh -o ./widevine.zip
 # Expected directory structure:
 #	  widevine.zip
 #	  ├── LICENSE.txt
