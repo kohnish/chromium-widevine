@@ -1,10 +1,7 @@
 #!/bin/bash
 
 # Find Chromium
-CHROMIUM_DIR="$(/bin/sh ./find-chromium.sh)"
-if [ -z "$CHROMIUM_DIR" ]; then
-	exit 1
-fi
+CHROMIUM_DIR="$1"
 
 # Get Widevine archive
 /bin/sh ./fetch-latest-widevine.sh -o ./widevine.zip
