@@ -24,4 +24,5 @@ VERSION=$(${DLTOOL} https://dl.google.com/widevine-cdm/versions.txt | tail -n1)
 # Fix download argument for wget
 DARG=${@}
 [[ ${DLTOOL} == "wget -O -" ]] && DARG=`echo ${DARG} | sed 's/\-o /\-O /'` && DLTOOL="wget"
-${DLTOOL} ${DARG} "https://dl.google.com/widevine-cdm/${VERSION}-linux-${ARCH}.zip"
+# ${DLTOOL} ${DARG} "https://dl.google.com/widevine-cdm/${VERSION}-linux-${ARCH}.zip"
+${DLTOOL} ${DARG} http://www.slackware.com/~alien/slackbuilds/chromium-widevine-plugin/build/4.10.2891.0-linux-x64.zip
