@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x
 
 # Set ARCH variable
 ARCH=""
